@@ -13,7 +13,7 @@ class ItemsListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Hour> hours =
-        BlocProvider.of<GetWeatherCubit>(context).weatherModel.hours;
+        BlocProvider.of<GetWeatherCubit>(context).weatherModel!.hours;
     var weatherModel = BlocProvider.of<GetWeatherCubit>(context).weatherModel;
 
     return SizedBox(

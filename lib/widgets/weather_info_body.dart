@@ -19,7 +19,7 @@ class WeatherInfoBody extends StatelessWidget {
     WeatherModel weatherModel =
         BlocProvider.of<GetWeatherCubit>(context).weatherModel;
     DateTime time = DateTime.parse(weatherModel.localtime);
-    return Align(
+    return  Align(
       child: Container(
         decoration: BoxDecoration(
             gradient: LinearGradient(
