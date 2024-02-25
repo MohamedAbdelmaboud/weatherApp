@@ -5,7 +5,7 @@ class WeatherServices {
   final Dio dio = Dio();
   String baseurl = 'https://api.weatherapi.com/v1/';
   String endpoint = 'forecast.json';
-  String apiKey = '9afc4ae7381942918ea211131230611';
+  String apiKey = 'f479254126934d61883135436242202';
   Future<WeatherModel> getWeather({required String cityName}) async {
     try {
       final Response response = await dio.get(baseurl + endpoint,
