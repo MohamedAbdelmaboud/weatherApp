@@ -27,6 +27,7 @@ class _SplashViewState extends State<SplashView> {
       double longitude = position.longitude;
       double latitude = position.latitude;
       String cityName = '$latitude,$longitude';
+      print('$latitude,$longitude');
       fun.getWether(cityName: cityName);
     });
   }

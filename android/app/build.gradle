@@ -50,9 +50,6 @@ android {
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
-task wrapper(type: Wrapper) {
-        gradleVersion = '4.1'
-    }
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.

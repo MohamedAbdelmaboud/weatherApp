@@ -25,7 +25,7 @@ class ItemsListView extends StatelessWidget {
         itemBuilder: (BuildContext context, int index) {
           return TodayItem(
             degree: hours[index].tempC,
-            imagePath: getWeatherImagePath(condition: weatherModel.condtion),
+            imagePath: getWeatherImagePath(condition: weatherModel!.condtion),
             time: DateFormat.j().format(hours[index].time),
           );
         },

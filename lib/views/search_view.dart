@@ -39,13 +39,16 @@ class SearchView extends StatelessWidget {
               children: [
                 Lottie.asset(Assets.assetsImagesAnimationLnqy7mvh),
                 Padding(
-                  padding: const EdgeInsets.only(top:40.0),
+                  padding: const EdgeInsets.only(top: 40.0),
                   child: TextField(
                     onSubmitted: (cityName) async {
                       var fun = BlocProvider.of<GetWeatherCubit>(context);
                       fun.getWether(cityName: cityName);
                       controller.clear();
                       Navigator.of(context).pop();
+                      print(BlocProvider.of<GetWeatherCubit>(context)
+                          .weatherModel!
+                          .cityName);
                     },
                     inputFormatters: [
                       FilteringTextInputFormatter.allow(RegExp(r'[a-zA-Z]'))
@@ -64,11 +67,13 @@ class SearchView extends StatelessWidget {
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
-                            color: MyColors.mainColor.withOpacity(0.6), width: 2),
+                            color: MyColors.mainColor.withOpacity(0.6),
+                            width: 2),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(color: Colors.white, width: 2),
+                        borderSide:
+                            const BorderSide(color: Colors.white, width: 2),
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),

@@ -8,6 +8,7 @@ import 'package:newweather/cubits/get_wether_cubit.dart';
 import 'package:newweather/widgets/custom_text.dart';
 import 'package:newweather/widgets/error_body.dart';
 import 'package:newweather/widgets/no_weather_body.dart';
+
 import '../widgets/weather_info_body.dart';
 
 class HomeView extends StatelessWidget {
@@ -16,7 +17,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
+        resizeToAvoidBottomInset: false,
         appBar: AppBar(
           leading: const Icon(Icons.location_on_outlined),
           title: const CustomText(

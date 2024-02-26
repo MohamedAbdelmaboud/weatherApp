@@ -12,7 +12,7 @@ class DetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     WeatherModel weatherModel =
-        BlocProvider.of<GetWeatherCubit>(context).weatherModel;
+        BlocProvider.of<GetWeatherCubit>(context).weatherModel!;
     return Scaffold(
         appBar: AppBar(
           title: const CustomText(

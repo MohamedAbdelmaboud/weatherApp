@@ -17,7 +17,7 @@ class WeatherInfoBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     WeatherModel weatherModel =
-        BlocProvider.of<GetWeatherCubit>(context).weatherModel;
+        BlocProvider.of<GetWeatherCubit>(context).weatherModel!;
     DateTime time = DateTime.parse(weatherModel.localtime);
     return  Align(
       child: Container(
