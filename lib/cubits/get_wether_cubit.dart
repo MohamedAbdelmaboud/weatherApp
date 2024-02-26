@@ -8,6 +8,7 @@ class GetWeatherCubit extends Cubit<WeatherStates> {
   WeatherModel? weatherModel;
   getWether({required String cityName}) async {
     try {
+      
       weatherModel = await WeatherServices().getWeather(cityName: cityName);
       emit(WeatherLoadedState());
     } catch (e) {
