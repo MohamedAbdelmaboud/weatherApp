@@ -19,8 +19,8 @@ class SplashView extends StatefulWidget {
 class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
-    super.initState();     
-     var fun = BlocProvider.of<GetWeatherCubit>(context);
+    super.initState();
+    var fun = BlocProvider.of<GetWeatherCubit>(context);
     Timer(const Duration(seconds: 3), () async {
       Navigator.pushReplacementNamed(context, 'HomeView');
       Position position = await determinePosition();
@@ -28,7 +28,7 @@ class _SplashViewState extends State<SplashView> {
       double latitude = position.latitude;
       String cityName = '$latitude,$longitude';
       print('$latitude,$longitude');
-      fun.getWether(cityName: cityName);
+      fun.getWeather(cityName: cityName);
     });
   }
 

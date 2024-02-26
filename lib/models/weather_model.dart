@@ -49,7 +49,7 @@ class Day {
   final double avgTemp;
   final double windSpeed;
   final double preciptation;
-  final double humdity;
+  final int humdity;
   final String condition;
   final String date;
   Day(
